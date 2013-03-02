@@ -8,6 +8,11 @@ var all = {
 		name: 'WQXR',
 		location: 'New York',
 		stream_url: 'http://stream.wqxr.org/wqxr'
+	},
+	kpbs: {
+		name: 'KPBS',
+		location: 'San Diego',
+		stream_url: 'http://kpbs-classical.streamguys.tv'
 	}
 }
 
