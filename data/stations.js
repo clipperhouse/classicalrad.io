@@ -7,7 +7,7 @@ var all = {
 	wqxr : {
 		name: 'WQXR',
 		location: 'New York',
-		stream_url: 'http://fm939.wnyc.org/'
+		stream_url: 'http://stream.wqxr.org/wqxr'
 	}
 }
 

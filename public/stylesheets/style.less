@@ -11,4 +11,15 @@ div.station {
 	h1 > span {
 		font-size: 14px;
 	}
+	audio {
+		display: none;
+	}
+	div#control {
+		background-image: url(audio.png);
+		width: 92px;
+		height: 92px;
+		&.playing {
+			background-position: -92px 0;
+		}
+	}
 }

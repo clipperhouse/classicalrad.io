@@ -1,10 +1,5 @@
-body {
-  padding: 30px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-a {
-  color: #00B7FF;
-}
-div.station h1 > span {
-  font-size: 14px;
-}
+body{padding:30px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}
+a{color:#00B7FF;}
+div.station h1>span{font-size:14px;}
+div.station audio{display:none;}
+div.station div#control{background-image:url(audio.png);width:92px;height:92px;}div.station div#control.playing{background-position:-92px 0;}
