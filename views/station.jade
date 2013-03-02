@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  h1 #{station.name}
-  p Welcome to #{station.name}
+	.station
+		h1 #{station.name} 
+			span #{station.location}
+		audio(src='#{station.stream_url}', type='audio/mp3', controls='controls')	
+	script
+		$('audio,video').mediaelementplayer();
