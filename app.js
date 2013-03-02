@@ -1,14 +1,8 @@
-
-/**
- * Module dependencies.
- */
-
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
+  , station = require('./routes/station')
   , http = require('http')
-  , path = require('path')
-  , stations = require('./stations');
+  , path = require('path');
 
 var app = express();
 
@@ -32,9 +26,8 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/:id', station.detail);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
-  console.log(stations.all);
 });
