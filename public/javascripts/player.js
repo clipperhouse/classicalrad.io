@@ -18,7 +18,7 @@ $(function() {
 				return false;
 			});
 
-			me.addEventListener('play', function() {
+			me.addEventListener('playing', function() {
 				control.addClass('playing');
 				status.text('Loading...');
 			}, false);
