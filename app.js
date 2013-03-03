@@ -14,7 +14,7 @@ app.configure(function(){
   app.use(express.compress());
   app.use(express.logger('dev'));
   app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, 'public'), { maxAge: 1800000 }));
 });
 
 app.configure('development', function(){
