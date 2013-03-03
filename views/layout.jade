@@ -13,9 +13,6 @@ html
 		block content
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
 		script(src='/javascripts/jQuery.fastClick.js')
-		script
-			$("a").fastClick(function () {
-				top.window.location.href=$(this).attr('href');
-			});
+		script(src='/javascripts/site.js')			
 		block js
 

@@ -18,6 +18,33 @@ h1.title {
 	margin-bottom: 20px;
 }
 
+span.pop {
+	display: inline-block;
+	width: 14px;
+	height: 12px;
+	background-image: url(pop.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+
+body.home {
+	span.pop {
+		padding: 0 15px;
+		margin-left: 10px;
+		opacity: 0;
+		transition:opacity 0.2s linear;
+		-webkit-transition: opacity 0.2s linear;
+		visibility:hidden;
+	}
+	h3:hover {
+		> span.pop {
+			opacity: 0;
+			visibility:visible;
+		}
+	}
+}
+
 body.station {
 	audio, object, embed {
 		display: none;
@@ -39,6 +66,23 @@ body.station {
 		margin: 10px auto;
 	}
 	p.return {
-		margin-top: 15px
+		margin-top: 15px;
+	}
+}
+
+body.pop {
+	p.return, span.pop {
+		display: none;
+	}	
+}
+
+body.mobile {
+	span.pop {
+		display: none;
+	}
+	h3:hover {
+		span.pop {
+			display: none;
+		}
 	}
 }

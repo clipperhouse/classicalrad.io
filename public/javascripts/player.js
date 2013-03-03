@@ -1,6 +1,7 @@
 $(function() {
 	MediaElement('player', {
 		success: function(me) {
+			window.player = me;
 			var control = $('#control');
 			var status = $("#status")
 			var title = $("title");
