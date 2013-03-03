@@ -14,6 +14,8 @@ body.station #control{border-radius:45px;background-repeat:no-repeat;background-
 body.station #status{margin:10px auto;}
 body.station p.return{margin-top:15px;}
 body.about{max-width:640px;}body.about p{margin-bottom:20px;}body.about p.q{font-weight:bold;}
+body.about p a,body.about p a:visited,body.about p a:active{color:#0058bd;}
+body.about .about{display:none;}
 body.pop p.return,body.pop span.pop{display:none;}
 body.mobile span.pop{display:none;}
 body.mobile h3:hover span.pop{display:none;}
