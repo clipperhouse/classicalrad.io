@@ -1,6 +1,7 @@
 var express = require('express')
   , routes = require('./routes')
   , station = require('./routes/station')
+  , about = require('./routes/about')
   , http = require('http')
   , path = require('path');
 
@@ -22,6 +23,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
+app.get('/about', about.index);
 app.get('/:id', station.detail);
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -6,8 +6,6 @@ block content
 	#control
 	#status Click to play
 	span.pop(title='click to play in a small pop-up window', data-url='#{pop_url}')
-	p.return
-		a(href='/') return to list
 	audio(src='#{station.stream_url}', type='audio/mp4', id='player')
 
 block js
