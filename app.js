@@ -11,6 +11,7 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon(__dirname + '/public/favicon.ico'));
+  app.use(express.compress());
   app.use(express.logger('dev'));
   app.use(express.methodOverride());
   app.use(express.cookieParser('your secret here'));
