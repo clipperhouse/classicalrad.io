@@ -1,6 +1,7 @@
 $(function(){
 	var pop = $("span.pop");
-	pop.fastClick(function() {
+
+	pop.click(function() {
 		if (window['player'] != undefined) {
 			window.player.pause();
 		}
@@ -11,7 +12,10 @@ $(function(){
 		return false;
 	});
 
-	$("a").fastClick(function () {
-		top.window.location.href=$(this).attr('href');
-	});
+	var mobile = $("body").hasClass("mobile");
+	if (mobile) {
+		$("a").fastClick(function () {
+			top.window.location.href=$(this).attr('href');
+		});
+	}
 });
