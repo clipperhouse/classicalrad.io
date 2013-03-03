@@ -1,4 +1,4 @@
-var stations = require('../data/stations');
+var stations = require('../lib/stations');
 var locals = { 
 	title: 'classicalrad.io',
 	bodyclass: 'home',

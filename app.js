@@ -29,5 +29,5 @@ app.get('/', routes.index);
 app.get('/:id', station.detail);
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+  console.log("classicalrad.io started on port " + app.get('port'));
 });

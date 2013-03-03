@@ -1,4 +1,4 @@
-var stations = require('../data/stations');
+var stations = require('../lib/stations');
 
 exports.detail = function(req, res){
 	var id = req.params.id;
