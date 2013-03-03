@@ -1,14 +1,16 @@
 extends layout
 
 block content
-	.station
-		h1 #{station.name} 
-			span #{station.location}
-		audio(src='#{station.stream_url}', type='audio/mp3', controls='controls', id='player')
-		div#control
-		p#status Loading...
-	p
-		a(href='/') home
+	h3 #{station.name} 
+		span #{station.location}
+	audio(src='#{station.stream_url}', type='audio/mp4', controls='controls', id='player')
+	div#control
+	p#status Loading...
+	p.return
+		a(href='/') return to list
+
+block js
+	script(src='/mediaelement/mediaelement-and-player.min.js')
 	script
 		MediaElement('player', {
 			success: function(me) {
@@ -33,7 +35,10 @@ block content
 
 				me.addEventListener('timeupdate', function() {
 					status.text("Playing for " + Math.round(me.currentTime) + " seconds");
-				}, false);
-				
+				}, false);				
 			}
 		});
+
+block head
+	link(rel='stylesheet', href='/mediaelement/mediaelementplayer.min.css')
+

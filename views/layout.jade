@@ -1,11 +1,14 @@
 doctype 5
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
-    script(src='/mediaelement/mediaelement-and-player.min.js')
-    link(rel='stylesheet', href='/mediaelement/mediaelementplayer.min.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		block head
+	body(class='#{bodyclass}')
+		h1.title
+			a(href='/') classicalrad.io
+		block content
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+		block js
 

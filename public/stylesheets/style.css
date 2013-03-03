@@ -1,5 +1,7 @@
-body{padding:30px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}
-a{color:#00B7FF;}
-div.station h1>span{font-size:14px;}
-div.station audio{display:none;}
-div.station div#control{background-image:url(audio.png);width:92px;height:92px;cursor:pointer;}div.station div#control.playing{background-position:-92px 0;}
+body{padding:1em 2em;font-family:"Lucida Grande",Helvetica,Arial,sans-serif;}
+h1 a,h2 a,h3 a,h4 a{color:inherit;text-decoration:none;}
+h1 span,h2 span,h3 span,h4 span{font-size:14px;}
+h1.title{margin-bottom:20px;}
+body.station audio,body.station object,body.station embed{display:none;}
+body.station div#control{background-image:url(audio.png);width:92px;height:92px;cursor:pointer;margin-bottom:10px;}body.station div#control.playing{background-position:-92px 0;}
+body.station p.return{margin-top:15px;}

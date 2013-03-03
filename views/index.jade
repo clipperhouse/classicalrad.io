@@ -1,8 +1,7 @@
 extends layout
 
 block content
-	h1= title
-
 	each station, id in stations
-		p
-			a(href=id) #{station.name}
+		h3
+			a(href=id) #{station.name} 
+				span  #{station.location}
