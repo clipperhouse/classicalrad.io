@@ -5,7 +5,7 @@ $(function() {
 			var status = $("#status")
 			me.play();
 			
-			control.mousedown(function() {
+			control.fastClick(function() {
 				if (me.paused)
 					me.play();
 				else
