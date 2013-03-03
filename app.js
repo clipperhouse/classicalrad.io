@@ -13,7 +13,6 @@ app.configure(function(){
   app.use(express.favicon(__dirname + '/public/favicon.ico'));
   app.use(express.compress());
   app.use(express.logger('dev'));
-  app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
 });
