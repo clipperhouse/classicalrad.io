@@ -7,6 +7,7 @@ $(function(){
 		var url = $(this).data('url');
 		var width = 350;
 		window.open(url, 'pop', 'left=' + (screen.width - width) + ', width=' + width + ', height=400, location=no');
+		document.location.href = '/';
 		return false;
 	});
 

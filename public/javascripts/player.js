@@ -18,9 +18,12 @@ $(function() {
 				return false;
 			});
 
+			me.addEventListener('play', function() {
+				status.text('Loading...');
+			}, false);
+
 			me.addEventListener('playing', function() {
 				control.addClass('playing');
-				status.text('Loading...');
 			}, false);
 
 			me.addEventListener('pause', function() {
