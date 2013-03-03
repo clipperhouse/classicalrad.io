@@ -3,13 +3,17 @@ $(function() {
 		success: function(me) {
 			var control = $('#control');
 			var status = $("#status")
+			var title = $("title");
+			
 			me.play();
 			
 			control.fastClick(function() {
-				if (me.paused)
+				if (me.paused) {
 					me.play();
-				else
+				}
+				else {
 					me.pause();
+				}
 				return false;
 			});
 
