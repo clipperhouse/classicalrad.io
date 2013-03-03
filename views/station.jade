@@ -3,11 +3,11 @@ extends layout
 block content
 	h3 #{station.name} 
 		span #{station.location}
-	audio(src='#{station.stream_url}', type='audio/mp4', controls='controls', id='player')
 	div#control
 	p#status Loading...
 	p.return
 		a(href='/') return to list
+	audio(src='#{station.stream_url}', type='audio/mp4', id='player')
 
 block js
 	script(src='/mediaelement/mediaelement.min.js')

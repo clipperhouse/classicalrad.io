@@ -5,11 +5,12 @@ $(function() {
 			var status = $("#status")
 			me.play();
 			
-			control.click(function() {
+			control.mousedown(function() {
 				if (me.paused)
 					me.play();
 				else
 					me.pause();
+				return false;
 			});
 
 			me.addEventListener('play', function() {
@@ -22,7 +23,7 @@ $(function() {
 
 			me.addEventListener('timeupdate', function() {
 				status.text(timeDisplay(me.currentTime, 'Playing for '));
-			}, false);				
+			}, false);
 		}
 	});
 
