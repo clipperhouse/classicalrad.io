@@ -1,6 +1,7 @@
 body {
   padding: 15px 20px;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 h1, h2, h3, h4 {
@@ -21,8 +22,9 @@ body.station {
 	audio, object, embed {
 		display: none;
 	}
-	div#control {
+	#control {
 		background-image: url(audio.png);
+		background-repeat: no-repeat;
 		width: 92px;
 		height: 92px;
 		cursor: pointer;
@@ -30,6 +32,9 @@ body.station {
 		&.playing {
 			background-position: -92px 0;
 		}
+	}
+	#status{
+		margin: 10px auto;
 	}
 	p.return {
 		margin-top: 15px

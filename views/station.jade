@@ -3,8 +3,8 @@ extends layout
 block content
 	h3 #{station.name} 
 		span #{station.location}
-	div#control
-	p#status Loading...
+	#control
+	#status Click to play
 	p.return
 		a(href='/') return to list
 	audio(src='#{station.stream_url}', type='audio/mp4', id='player')

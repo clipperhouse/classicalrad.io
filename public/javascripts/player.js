@@ -15,6 +15,7 @@ $(function() {
 
 			me.addEventListener('play', function() {
 				control.addClass('playing');
+				status.text('Loading...');
 			}, false);
 
 			me.addEventListener('pause', function() {
