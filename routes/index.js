@@ -1,10 +1,10 @@
 var stations = require('../lib/stations');
+var utils = require('../lib/utils');
 
 exports.index = function(req, res){
-	var mobile = /mobile/i.test(req.header('user-agent'));	
 	var locals = { 
 		title: 'classicalrad.io',
-		bodyclass: 'home' + (mobile ? ' mobile' : ''),
+		bodyclass: utils.bodyClass(req, 'home'),
 		stations: stations.all 
 	};
 	res.render('index', locals);
