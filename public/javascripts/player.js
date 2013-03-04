@@ -1,5 +1,6 @@
 $(function() {
 	MediaElement('player', {
+		pluginPath: '/mediaelement/',
 		success: function(me) {
 			window.player = me;
 			var control = $('#control');
