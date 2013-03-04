@@ -3,10 +3,14 @@ extends layout
 block content
 	h3 #{station.name} 
 		span #{station.location}
-	#control
+	#control 
+		span.play ▶
+		span.pause 
+		span.pause 
 	#status Click to play
 	span.pop(title='click to play in a small pop-up window', data-url='#{pop_url}')
 	audio(src='#{station.stream_url}', type='audio/mp4', id='player')
+	
 
 block js
 	script(src='/mediaelement/mediaelement.min.js')
