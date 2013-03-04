@@ -10,9 +10,7 @@ body.home span.pop{padding:0 15px;margin-left:10px;opacity:0;transition:opacity 
 body.home h3:hover>span.pop{opacity:0;visibility:visible;}
 body.home a.home{display:none;}
 body.station audio,body.station object,body.station embed{display:none;}
-body.station #control{border-radius:45px;background-repeat:no-repeat;background-color:#333;width:92px;height:92px;cursor:pointer;margin-bottom:10px;position:relative;}body.station #control span{text-align:center;font-size:64px;color:#fff;position:absolute;left:24px;top:10px;display:inline-block;}body.station #control span.pause{display:none;background-color:#fff;width:12px;height:48px;top:23px;left:28px;}body.station #control span.pause+span.pause{left:52px;}
-body.station #control.playing span.pause{display:inline-block;}
-body.station #control.playing span.play{display:none;}
+body.station #control{border-radius:45px;background-repeat:no-repeat;background-color:#333;background-image:url(audio.png);width:92px;height:92px;cursor:pointer;margin-bottom:10px;}body.station #control.playing{background-position:-92px 0;}
 body.station #status{margin:10px auto;}
 body.station p.return{margin-top:15px;}
 body.about{max-width:640px;}body.about p{margin-bottom:20px;}body.about p.q{font-weight:bold;}

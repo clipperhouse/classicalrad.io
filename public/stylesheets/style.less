@@ -72,40 +72,13 @@ body.station {
 		border-radius: 45px;
 		background-repeat: no-repeat;
 		background-color: #333;
+		background-image: url(audio.png);
 		width: 92px;
 		height: 92px;
 		cursor: pointer;
 		margin-bottom: 10px;
-		position: relative;
-
-		span {
-			text-align: center;
-			font-size: 64px;
-			color: #fff;
-			display: inline-block;
-			position: absolute;
-			left: 24px;
-			top: 10px;
-			display: inline-block;
-			&.pause {
-				display: none;
-				background-color: #fff;
-				width: 12px;
-				height: 48px;
-				top: 23px;
-				left:28px;
-				+ span.pause {
-					left: 52px;
-				}
-			}
-		}
 		&.playing {
-			span.pause {
-				display: inline-block;
-			}
-			span.play {
-				display: none;
-			}
+			background-position: -92px 0;
 		}
 	}
 	#status{
