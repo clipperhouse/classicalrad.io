@@ -31,7 +31,9 @@ $(function() {
 			}, false);
 
 			me.addEventListener('timeupdate', function() {
-				status.text(timeDisplay(me.currentTime, 'Playing for '));
+				if (me.currentTime > 1) {
+					status.text(timeDisplay(me.currentTime, 'Playing for '));
+				}
 			}, false);
 		}
 	});
