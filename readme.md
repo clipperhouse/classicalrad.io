@@ -4,7 +4,7 @@
 
 A distraction-free, web-based, mobile-friendly directory and player for classical radio stations.
 
-You can use it at [classicalrad.io](http://classicalrad.io). More of the rationale is [here](http://classicalrad.io).
+You can use it at [classicalrad.io](http://classicalrad.io). More of the rationale is [here](http://classicalrad.io/about).
 
 ## Feedback
 
