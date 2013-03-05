@@ -11,6 +11,14 @@ app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
+  app.all(/.*/, function(req, res, next) {
+    var host = req.header("host");
+    if (host.match(/^www\..*/i)) {
+      res.redirect(301, "http://" + host.replace(/^www\./, ''));
+    } else {
+      next();
+    }
+  });
   app.use(express.favicon(__dirname + '/public/favicon.ico'));
   app.use(express.compress());
   app.use(express.logger('dev'));
