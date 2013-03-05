@@ -12,7 +12,7 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.all(/.*/, function(req, res, next) {
-    var host = req.header("host");
+    var host = req.host;
     if (host.match(/^www\..*/i)) {
       res.redirect(301, "http://" + host.replace(/^www\./, ''));
     } else {
