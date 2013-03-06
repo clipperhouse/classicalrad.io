@@ -14,4 +14,6 @@ You can use it at [classicalrad.io](http://classicalrad.io). More of the rationa
 
 I’d like to add more general .pls file format support, right now the streams are hard-coded.
 
+I’d like to start collecting stats on how long it takes for streams to start playing, and possibly stop linking to the slow ones.
+
 And there’s no reason this couldn’t be used for other kinds of radio.
