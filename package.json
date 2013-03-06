@@ -7,8 +7,7 @@
   },
   "dependencies": {
     "express": "3.1.0",
-    "jade": "*",
-    "less-middleware": "*"
+    "jade": "*"
   },
   "engines": {
     "node": "0.8.x",
