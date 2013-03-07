@@ -15,7 +15,28 @@ $(function(){
 	var mobile = $("body").hasClass("mobile");
 	if (mobile) {
 		$("a").fastClick(function () {
-			top.window.location.href=$(this).attr('href');
+			if ($(this).attr("href")) {
+				top.window.location.href=$(this).attr('href');
+			}
+		});
+	}
+
+	var home = $("body").hasClass("home");
+	if (home) {
+		$("p.more > a").each(function(){
+			$(this).data("original", $(this).text())
+		})
+		.fastClick(function () {
+			var a = $(this);
+			$("#surprise").slideToggle(function(){
+				var visible = $(this).is(":visible");
+				if (visible) {
+					a.text(a.data("toggle"));
+				} else {
+					a.text(a.data("original"));					
+				}
+			});
+			return false;
 		});
 	}
 });
