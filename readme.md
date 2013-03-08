@@ -16,4 +16,8 @@ I’d like to add more general .pls file format support, right now the streams a
 
 I’d like to start collecting stats on how long it takes for streams to start playing, and possibly stop linking to the slow ones.
 
+Sort out why streams play and others don’t. Not a small thing to sort.
+
+Replace "time playing" with custom implementation instead of relying on player’s time event, which seems to crap out after a while.
+
 And there’s no reason this couldn’t be used for other kinds of radio.
