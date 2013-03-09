@@ -2,6 +2,7 @@ var express = require('express')
   , routes = require('./routes')
   , station = require('./routes/station')
   , about = require('./routes/about')
+  , pls = require('./routes/pls')
   , http = require('http')
   , path = require('path');
 
@@ -32,6 +33,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/about', about.index);
+app.get('/pls', pls.index);
 app.get('/:id', station.detail);
 
 http.createServer(app).listen(app.get('port'), function(){
