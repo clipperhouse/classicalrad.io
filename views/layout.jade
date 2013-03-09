@@ -7,6 +7,7 @@ html
 		meta(name='viewport', content='width = 360')
 		link(rel='shortcut icon', href='/favicon.ico')
 		meta(name='description', content='A distraction-free directory and player for classical radio stations.')
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
 		block head
 	body(class='#{bodyclass}')
 		h1.title
@@ -15,7 +16,6 @@ html
 		#footer
 			a.home(href='/') home
 			a.about(href='/about') about
-		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
 		script(src='/javascripts/jQuery.fastClick.js')
 		script(src='/javascripts/site.js')
 		block js

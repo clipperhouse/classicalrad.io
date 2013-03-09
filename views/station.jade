@@ -8,6 +8,6 @@ block content
 	span.pop(title='click to play in a small pop-up window', data-url='#{pop_url}')
 	audio(src='#{station.stream_url}', type='audio/mp4', id='player')
 
-block js
+block head
 	script(src='/mediaelement/mediaelement.min.js')
 	script(src='/javascripts/player.js')
