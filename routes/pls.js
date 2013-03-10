@@ -1,4 +1,4 @@
-var pls = require('../lib/pls-parser.js')
+var pls = require('../lib/pls-parser')
 	, utils = require('../lib/utils');
 
 exports.index = function(req, res){
