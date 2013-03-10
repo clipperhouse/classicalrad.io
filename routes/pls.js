@@ -1,6 +1,5 @@
-//http://provisioning.streamtheworld.com/pls/KDFCFM.pls
-var pls = require('../lib/pls-parser.js');
-var utils = require('../lib/utils');
+var pls = require('../lib/pls-parser.js')
+	, utils = require('../lib/utils');
 
 exports.index = function(req, res){
 	var locals = {
