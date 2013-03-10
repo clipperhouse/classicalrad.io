@@ -6,9 +6,10 @@ $(function() {
 			var control = $('#control');
 			var status = $("#status")
 			var title = $("title");
-			
+
+			me.volume = 0;
 			me.play();
-			
+
 			control.fastClick(function() {
 				if (me.paused) {
 					me.play();
@@ -24,6 +25,9 @@ $(function() {
 			}, false);
 
 			me.addEventListener('playing', function() {
+				$("audio").animate({volume: 1}, 500, function(){
+					me.volume = 1;		// in case audio tag is not supported
+				});
 				control.addClass('playing');
 			}, false);
 
