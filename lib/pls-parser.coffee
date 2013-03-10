@@ -1,5 +1,5 @@
-request = require("request")
-cache = require("memory-cache")
+request = require('request')
+cache = require('memory-cache')
 
 cache_duration = 1000 * 60 * 60 * 6
 
@@ -24,11 +24,11 @@ fetch = (url, callback) ->
   if url
     cached = cache.get(url)
     if cached
-      console.log "using cache for " + url
+      console.log "using cache for #{ url }"
       callback cached
       return
     request url, (error, response, body) ->
-      console.log "requesting " + url
+      console.log "requesting #{ url }"
       if not error and response.statusCode is 200
         result = parse(body)
         cache.put url, result, cache_duration
