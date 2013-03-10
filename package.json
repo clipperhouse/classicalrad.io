@@ -9,7 +9,8 @@
     "express": "3.1.x",
     "jade": "*",
     "request": "2.14.x",
-    "memory-cache": "0.0.x"
+    "memory-cache": "0.0.x",
+    "coffee-script": "1.6.x"
   },
   "engines": {
     "node": "0.8.x",
