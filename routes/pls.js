@@ -8,7 +8,7 @@ exports.index = function(req, res){
 		bodyclass: utils.bodyClass(req, 'about')
 	};
 
-	pls.parse(req.query.url, function(items) {
+	pls.fetch(req.query.url, function(items) {
 		res.json(200, items);
 	});
 };
