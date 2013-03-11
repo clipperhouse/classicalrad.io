@@ -6,6 +6,10 @@ exports.detail = (req, res) ->
   id = req.params.id
   station = stations.byId(req, id)
 
+  if !station?
+    res.send(404, '')
+    return
+
   render = (playlist) ->
     stream_url = station.stream_url
     if playlist
