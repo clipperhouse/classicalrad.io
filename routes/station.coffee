@@ -13,7 +13,7 @@ exports.detail = (req, res) ->
   render = (playlist) ->
     stream_url = station.stream_url
     if playlist
-      items = (item for item in playlist when item.file)
+      items = (item for item in playlist when item.file?)
       stream_url = items[0].file  if items.length
     locals =
       title: "#{ station.name } | classicalrad.io"
@@ -23,7 +23,7 @@ exports.detail = (req, res) ->
       stream_url: stream_url
     res.render 'station', locals
 
-  if station.playlist_url
+  if station.playlist_url?
     pls.fetch station.playlist_url, render
   else
     render()
