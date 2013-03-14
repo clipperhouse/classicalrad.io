@@ -9,5 +9,5 @@ block content
 	audio(src='#{stream_url}', type='audio/mp4', id='player')
 
 block head
-	script(src='/mediaelement/mediaelement.min.js')
-	script(src='/javascripts/player.js')
+	!=js('/mediaelement/mediaelement.min.js')
+	!=js('/javascripts/player.js')

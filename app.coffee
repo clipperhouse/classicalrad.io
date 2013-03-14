@@ -5,7 +5,7 @@ about = require('./routes/about')
 pls = require('./routes/pls')
 http = require('http')
 path = require('path')
-
+assets = require('connect-assets')
 app = express()
 
 app.configure ->
@@ -19,10 +19,10 @@ app.configure ->
       res.redirect 301, 'http://' + host.replace(/^www\./, '')
     else
       next()
-
   app.use express.compress()
   app.use express.logger('dev')
   app.use app.router
+  app.use assets({ src: 'public' })
   app.use express.static(path.join(__dirname, 'public'),
     maxAge: 1800000
   )
