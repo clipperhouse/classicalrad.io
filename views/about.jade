@@ -2,13 +2,13 @@ extends layout
 
 block content
 	h3 About
-	p 
+	p
 		strong classicalrad.io 
 		| is a pet project by 
 		a(href='http://clipperhouse.com') Matt Sherman
 		|. He is also the founder of 
-		a(href='http://alikewise.com') Alikewise.com
-		|  and is on staff at 
+		a(href='http://alikewise.com') Alikewise.com  
+		| and is on staff at 
 		a(href='http://stackexchange.com/about/team') Stack Overflow.
 
 	p.q	What’s it for?
@@ -23,10 +23,12 @@ block content
 	p.q	It doesn’t display the album covers.
 	p 	Guys with powdered wigs standing next to spinets, you mean? Lang Lang’s $400 haircut? I can do without.
 	p.q	What’s the technology?
-	p 	I built it with node.js. 
-		a(href='http://mediaelementjs.com/') MediaElement.js
-		|  proved very helpful. Here’s my 
+	p 	I built it with node.js & CoffeeScript. 
+		a(href='http://mediaelementjs.com/') MediaElement.js 
+		| proved very helpful. Here’s my 
 		a(href='https://github.com/clipperhouse/classicalrad.io') source code
 		|. It’s hosted on 
 		a(href='https://devcenter.heroku.com/articles/nodejs') Heroku
-		|. 
+		|, and I put 
+		a(href='http://aws.amazon.com/cloudfront/') Amazon’s CDN 
+		| in front of it.
