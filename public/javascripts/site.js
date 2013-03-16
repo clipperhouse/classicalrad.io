@@ -17,7 +17,7 @@ $(function(){
 		$("p.more > a").each(function(){
 			$(this).data("original", $(this).text())
 		})
-		.fastClick(function () {
+		.click(function () {
 			var a = $(this);
 			$("#surprise").slideToggle(function(){
 				var visible = $(this).is(":visible");
