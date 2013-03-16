@@ -5,7 +5,11 @@ $(function() {
 		audioHeight: '92',
 		features: ['playpause'],
 		pluginPath: '/mediaelement/',
-		success : function(me) {
+		success : function(me, node) {
+			if (me.pluginType) {
+				node.src = null;		// in auto_plugin mode, both the plugin and the audio element seem to play; disable the latter
+				node.load();
+			}
 			var status = $("#status");
 
 			me.addEventListener('play', function() {
