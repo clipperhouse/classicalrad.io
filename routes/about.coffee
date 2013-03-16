@@ -4,4 +4,5 @@ exports.index = (req, res) ->
   locals =
     title: 'About classicalrad.io'
     bodyclass: utils.bodyClass req, 'about'
+  res.setHeader 'Cache-Control', 'max-age=300'
   res.render 'about', locals
