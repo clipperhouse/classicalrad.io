@@ -2,13 +2,12 @@ stations = require('../lib/stations')
 utils = require('../lib/utils')
 pls = require('../lib/pls-parser')
 
-exports.detail = (req, res) ->
+exports.detail = (req, res, next) ->
   id = req.params.id
   station = stations.byId(req, id)
 
   if !station?
-    res.send(404, '')
-    return
+    return next()
 
   render = (playlist) ->
     stream_url = station.stream_url
@@ -17,8 +16,8 @@ exports.detail = (req, res) ->
       stream_url = items[0].file  if items.length
     locals =
       title: "#{ station.name } | classicalrad.io"
-      bodyclass: utils.bodyClass(req, 'station')
-      pop_url: req.path + '?pop'
+      bodyclass: utils.bodyClass(req, "station #{ req.params.mode }")
+      pop_url: req.path + '/pop'
       station: station
       stream_url: stream_url
     res.render 'station', locals

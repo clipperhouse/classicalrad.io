@@ -33,7 +33,7 @@ app.configure 'development', ->
 app.get '/', routes.index
 app.get '/about', about.index
 app.get '/pls', pls.index
-app.get '/:id', station.detail
+app.get '/:id/:mode?', station.detail
 
 http.createServer(app).listen app.get('port'), ->
   console.log 'classicalrad.io started on port ' + app.get('port')
