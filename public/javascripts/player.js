@@ -1,38 +1,15 @@
 $(function() {
-	MediaElement('player', {
+	$('audio').mediaelementplayer({
+		mode: 'auto_plugin',
+		audioWidth: '92',
+		audioHeight: '92',
+		features: ['playpause'],
 		pluginPath: '/mediaelement/',
-		success: function(me) {
-			window.player = me;
-			var control = $('#control');
-			var status = $("#status")
-			var title = $("title");
-
-			me.volume = 0;
-			me.play();
-
-			control.fastClick(function() {
-				if (me.paused) {
-					me.play();
-				}
-				else {
-					me.pause();
-				}
-				return false;
-			});
+		success : function(me) {
+			var status = $("#status");
 
 			me.addEventListener('play', function() {
 				status.text('Loading...');
-			}, false);
-
-			me.addEventListener('playing', function() {
-				$("audio").animate({volume: 1}, 500, function(){
-					me.volume = 1;		// in case audio tag is not supported
-				});
-				control.addClass('playing');
-			}, false);
-
-			me.addEventListener('pause', function() {
-				control.removeClass('playing');
 			}, false);
 
 			me.addEventListener('timeupdate', function() {

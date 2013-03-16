@@ -12,15 +12,6 @@ $(function(){
 		return false;
 	});
 
-	var mobile = $("body").hasClass("mobile");
-	if (mobile) {
-		$("a").fastClick(function () {
-			if ($(this).attr("href")) {
-				top.window.location.href=$(this).attr('href');
-			}
-		});
-	}
-
 	var home = $("body").hasClass("home");
 	if (home) {
 		$("p.more > a").each(function(){

@@ -1,10 +1,10 @@
-stations = require('../lib/stations')
+sites = require('../lib/sites')
 utils = require('../lib/utils')
 pls = require('../lib/pls-parser')
 
 exports.detail = (req, res, next) ->
   id = req.params.id
-  station = stations.byId(req, id)
+  station = sites.getStationById(req, id)
 
   if !station?
     return next()

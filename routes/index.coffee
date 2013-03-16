@@ -1,12 +1,12 @@
-stations = require('../lib/stations')
+sites = require('../lib/sites')
 utils = require('../lib/utils')
 
 exports.index = (req, res) ->
   locals =
     title: 'classicalrad.io'
     bodyclass: utils.bodyClass(req, 'home')
-    stations: stations.bySurprise(req, false)
-    surprise_stations: stations.bySurprise(req, true)
+    stations: sites.getStations(req, false)
+    surprise_stations: sites.getStations(req, true)
 
   res.setHeader 'Cache-Control', 'max-age=300'
   res.render 'index', locals
