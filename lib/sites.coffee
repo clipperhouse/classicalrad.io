@@ -92,6 +92,5 @@ getStations = (req, surprise) ->
 getStationById = (req, id) ->
   getStations(req)[id]
 
-exports.getSiteTitle = getSiteTitle
 exports.getStations = getStations
 exports.getStationById = getStationById
