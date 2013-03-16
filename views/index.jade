@@ -5,7 +5,6 @@ block content
 		h3
 			a(href=id, title='click to play') #{station.name}
 				span  #{station.location}
-			span.pop(title='click to play in a small pop-up window', data-url='#{id}?pop')	each station, id in stations
 	#surprise
 		each station, id in surprise_stations
 			h3
