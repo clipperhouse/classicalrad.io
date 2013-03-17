@@ -80,7 +80,6 @@ getSiteByHost = (req) ->
   sites[req.query.station] or sites[req.host] or sites[default_site]
 
 getStations = (req, surprise) ->
-  console.log sites
   stations = getSiteByHost(req)
   if surprise is true or surprise is false
     result = {}
