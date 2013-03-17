@@ -6,7 +6,7 @@ $(function() {
 		features: ['playpause'],
 		pluginPath: '/mediaelement/',
 		success : function(me, node) {
-			if (me.pluginType) {
+			if (me.pluginType != 'native') {
 				node.src = null;		// in auto_plugin mode, both the plugin and the audio element seem to play; disable the latter
 				node.load();
 			}
