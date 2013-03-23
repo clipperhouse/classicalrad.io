@@ -11,7 +11,9 @@ body.home h3:hover>span.pop{opacity:0;visibility:visible;}
 body.home a.home{display:none;}
 body.home #surprise{display:none;}
 body.home p.more a{cursor:pointer;}
-body.station audio,body.station object,body.station embed{display:none;}
+body.station .me-plugin,body.station .mejs-mediaelement,body.station audio,body.station embed{width:0;height:0;}
+body.station .mejs-playpause-button button{border:0;border-radius:45px;background-repeat:no-repeat;background-color:#333;background-image:url('/stylesheets/audio-d41d8cd98f00b204e9800998ecf8427e.png');width:92px;height:92px;cursor:pointer;margin-bottom:10px;display:block;}
+body.station .mejs-playpause-button.mejs-pause button{background-position:-92px 0;}
 body.station #control{border-radius:45px;background-repeat:no-repeat;background-color:#333;background-image:url('/stylesheets/audio-d41d8cd98f00b204e9800998ecf8427e.png');width:92px;height:92px;cursor:pointer;margin-bottom:10px;}body.station #control.playing{background-position:-92px 0;}
 body.station #status{margin:10px auto;}
 body.station p.return{margin-top:15px;}
