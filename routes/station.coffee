@@ -20,7 +20,7 @@ exports.detail = (req, res, next) ->
       pop_url: req.path + '/pop'
       station: station
       stream_url: stream_url
-    res.setHeader 'Cache-Control', 'max-age=300'
+    res.setHeader 'Cache-Control', 'max-age=3600'
     res.render 'station', locals
 
   if station.playlist_url?

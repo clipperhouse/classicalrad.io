@@ -8,5 +8,5 @@ exports.index = (req, res) ->
     stations: sites.getStations(req, false)
     surprise_stations: sites.getStations(req, true)
 
-  res.setHeader 'Cache-Control', 'max-age=300'
+  res.setHeader 'Cache-Control', 'max-age=3600'
   res.render 'index', locals
