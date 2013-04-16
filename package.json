@@ -6,7 +6,7 @@
     "start": "coffee app.coffee"
   },
   "dependencies": {
-    "express": "3.1.x",
+    "express": "3.2.x",
     "jade": "*",
     "request": "2.16.x",
     "memory-cache": "0.0.x",
