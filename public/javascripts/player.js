@@ -1,15 +1,11 @@
 $(function() {
 	$('audio').mediaelementplayer({
-		mode: 'auto_plugin',
+		mode: 'auto',
 		audioWidth: '92',
 		audioHeight: '92',
 		features: ['playpause'],
 		pluginPath: '/mediaelement/',
 		success : function(me, node) {
-			if (me.pluginType != 'native') {
-				node.src = null;		// in auto_plugin mode, both the plugin and the audio element seem to play; disable the latter
-				node.load();
-			}
 			var status = $("#status");
 
 			me.addEventListener('play', function() {
