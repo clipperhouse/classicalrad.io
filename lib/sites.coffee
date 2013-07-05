@@ -68,6 +68,12 @@ sites =
       stream_url: 'http://media-ice.musicradio.com/ClassicFMMP3'
       surprise: true
 
+    rrm:
+      name: 'Radio România Muzical'
+      location: 'Romania'
+      stream_url: 'http://stream2.srr.ro:8026/;'
+      surprise: true
+
   'jazzrad.io':
     kcsm:
       name: 'KCSM'
