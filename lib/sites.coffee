@@ -62,6 +62,12 @@ sites =
       stream_url: 'http://classicalstream1.publicradio.org/'
       surprise: true
 
+    weta:
+      name: 'WETA'
+      location: 'Washington, D.C.'
+      stream_url: 'http://stream.weta.org:8000/fmlive'
+      surprise: true
+
     cfm:
       name: 'ClassicFM'
       location: 'UK'
