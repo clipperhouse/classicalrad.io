@@ -1,4 +1,4 @@
-doctype 5
+doctype html
 html
 	head
 		title= title
@@ -18,7 +18,7 @@ html
 			a.about(href='/about') about
 		!= js('/javascripts/site.js')
 		block js
-		script(type='text/javascript')
+		script.
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-39029303-1']);
 			_gaq.push(['_trackPageview']);
