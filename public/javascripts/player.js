@@ -1,8 +1,8 @@
 $(function() {
 	$('audio').mediaelementplayer({
 		mode: 'auto',
-		audioWidth: '92',
-		audioHeight: '92',
+		audioWidth: 92,
+		audioHeight: 92,
 		features: ['playpause'],
 		pluginPath: '/mediaelement/',
 		success : function(me, node) {
