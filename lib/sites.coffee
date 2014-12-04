@@ -47,7 +47,7 @@ sites =
     kusc:
       name: 'KUSC'
       location: 'Los Angeles'
-      stream_url: 'http://64.202.109.2:80/kusc-128k'
+      playlist_url: 'http://playerservices.streamtheworld.com/pls/KUSCMP128.pls'
       surprise: true
 
     wdav:
