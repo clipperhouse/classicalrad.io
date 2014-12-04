@@ -23,7 +23,7 @@ sites =
     wgbh:
       name: 'WGBH'
       location: 'Boston'
-      stream_url: 'http://audio.wgbh.org:9004/;*.nsv'
+      stream_url: 'http://audio.wgbh.org:8004'
       surprise: false
 
     kpbs:
