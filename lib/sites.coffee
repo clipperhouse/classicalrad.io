@@ -35,7 +35,7 @@ sites =
     king:
       name: 'KING'
       location: 'Seattle'
-      stream_url: 'http://sc1.abacast.com:8246/;'
+      stream_url: 'http://icy2.abacast.com:80/king-kingmp3-96'
       surprise: false
 
     kmfa:
